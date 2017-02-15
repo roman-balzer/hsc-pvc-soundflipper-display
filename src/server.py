@@ -14,7 +14,7 @@ class ServerHandler:
     # Server starts and runs forever.
     def __init__(self):
         self.score = 0
-        self.muliplicator = 1
+        self.multiplicator = 1
 
         # Create server
         self.server = SimpleXMLRPCServer(("0.0.0.0", 4000),
@@ -38,7 +38,7 @@ class ServerHandler:
     # Newpoints are muliplied with muliplicator.
     # The new score is sent to the display.
     def addPoints(newpoints):
-        self.score = self.score + (newpoints * self.muliplicator)
+        self.score = self.score + (newpoints * self.multiplicator)
         display.writeScore(self.score)
     
     ## Starts a new game. Score is set to zero.
